@@ -1,0 +1,1 @@
+# webextension-secret-recovery-phrase-watcher
