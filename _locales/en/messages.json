@@ -1,0 +1,21 @@
+{
+  "extensionName": {
+    "message": "Secret Recovery Phrase Watcher"
+  },
+
+  "extensionDescription": {
+    "message": "Monitors users typing words inside webpages and if it matches words from the BIP39 recovery phrase dictionary, warn the user."
+  },
+
+  "one": {
+    "message": "Did you really want to share your 'Secret Recovery Phrase' with that website?"
+  },
+
+  "two": {
+    "message": "Anyone with your 'Secret Recovery Phrase' can ~empty your account~ remotely."
+  },
+
+  "three": {
+    "message": "Official staff ~have no reason~ to ask you for it."
+  }
+}
