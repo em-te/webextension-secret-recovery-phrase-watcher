@@ -37,6 +37,7 @@ function processNext() {
         bip319.lastIndexOf(input.substring(0, i)) + 20,
       );
       // a, ab, abi, abil, abili^ka, abili^kay
+      //you, youth, youthis^
       const len = input.length;
       while (i <= len && section.includes(input.substring(0, i))) {
         ++i;
@@ -45,8 +46,14 @@ function processNext() {
         --i;
         if (section.includes(input.substring(0, i) + "\n")) {
           queue = queue.slice(i - 1);  //minus the leading CRLF char
+          
           if (!matches) matches = [];
-          matches.push(input.substring(1, i));
+          
+          const word = input.substring(1, i);
+          //these words are too common so we skip them
+          if (word !== "that" && word !== "have" && word !== "you") {
+            matches.push(word);
+          }
 
           if (matches.length > 4) {
             if (!warned) {
